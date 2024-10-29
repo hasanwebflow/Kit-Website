@@ -252,6 +252,9 @@ img {
 .bg_light_green {
   background-color: var(--brand--light_green);
 }
+.bg_purple {
+  background-color: var(--brand--purple);
+}
 
 .P_relative {
   position: relative;
