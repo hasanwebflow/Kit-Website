@@ -4,6 +4,7 @@
   --typography--dark-gray: #6a6e72;
   --typography--black: #1e1e1e;
   --typography--ash: #e6e3dd;
+  --typography--purple: #dda4f8;
   --typography--red_orange: #c24013;
   --typography--green: #157033;
   --brand--blue: #41a9f4;
@@ -112,6 +113,7 @@ img {
 .text_kit_blue {
   color: var(--brand--blue);
 }
+
 .text_kit_green {
   color: var(--brand--bright_green);
 }
@@ -121,7 +123,7 @@ img {
 }
 
 .text_kit_purple {
-  color: var(--brand--purple);
+  color: var(--typography--purple);
 }
 
 .rounded_brand {
@@ -160,10 +162,21 @@ img {
   max-width: 37.5rem;
 }
 
+.max_w320 {
+  max-width: 20rem;
+}
+.max_w390 {
+  max-width: 24.375rem;
+}
+
 .bullet_point {
   width: 1rem;
   height: 1rem;
   border-radius: 50%;
+}
+
+.p_24 {
+  padding: 1.5rem;
 }
 
 .p_32 {
@@ -178,6 +191,14 @@ img {
   padding: 5rem;
 }
 
+.pt_100 {
+  padding-top: 10rem;
+}
+
+.pb_100 {
+  padding-bottom: 10rem;
+}
+
 .mt_4 {
   margin-top: 0.25rem;
 }
@@ -185,12 +206,17 @@ img {
 .mr_8 {
   margin-right: 0.5rem;
 }
+
 .mr_16 {
   margin-right: 1rem;
 }
 
 .mb_12 {
   margin-bottom: 0.75rem;
+}
+
+.mb_24 {
+  margin-bottom: 1.5rem;
 }
 
 .mb_32 {
@@ -207,6 +233,10 @@ img {
 
 .gap_3 {
   gap: 0.5rem;
+}
+
+.gap_4 {
+  gap: 0.25rem;
 }
 
 .fw_600 {
@@ -228,6 +258,7 @@ img {
 .t_red_orange {
   color: var(--typography--red_orange);
 }
+
 .t_green {
   color: var(--typography--green);
 }
@@ -251,11 +282,16 @@ img {
 .bg_light_orange {
   background-color: var(--brand--light_orange);
 }
+
 .bg_light_green {
   background-color: var(--brand--light_green);
 }
+
 .bg_purple {
   background-color: var(--brand--purple);
+}
+.bg_ash {
+  background-color: var(--typography--ash);
 }
 
 .P_relative {
@@ -269,6 +305,7 @@ img {
 .text_center {
   text-align: center;
 }
+
 .text_left {
   text-align: left;
 }
@@ -323,12 +360,14 @@ h4 {
 }
 
 .heading_sm {
+  font-family: 'KitSans';
   font-size: 3rem;
   font-weight: 500;
   line-height: 1;
 }
 
 .heading_xs {
+  font-family: 'KitSans';
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1;
@@ -347,9 +386,7 @@ h4 {
 
 .text_reg {
   font-size: 1rem;
-  font-weight: 400;
   line-height: 1.5;
-  color: var(--brand--black);
 }
 
 .text_sm {
@@ -446,8 +483,7 @@ h4 {
 }
 
 .button_primary {
-  padding: 0.75rem 0.875rem;
-  background-color: var(--brand--blue);
+  padding: 0.5rem 0.875rem;
   display: inline-block;
 }
 
@@ -548,7 +584,7 @@ h4 {
   display: inline-block;
 }
 
-.grow_section_heder {
+.grow_section_header {
   display: flex;
   justify-content: space-between;
   grid-column-gap: 1rem;
@@ -556,11 +592,11 @@ h4 {
   flex-flow: wrap;
 }
 
-.grow_section_heder_left {
+.grow_section_header_left {
   flex-shrink: 0;
 }
 
-.grow_section_heder_right {
+.grow_section_header_right {
   max-width: 37.5rem;
   display: flex;
   flex-flow: column;
@@ -668,3 +704,99 @@ h4 {
 }
 
 /* textimonial_section_end */
+
+/* email_section_start */
+
+.section_email_component {
+  display: flex;
+  flex-flow: column;
+  grid-row-gap: 5rem;
+  text-align: center;
+}
+
+.section_email_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(309px, 100%), 1fr));
+
+}
+
+.section_email_single_item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section_email_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.email_single_item_inner_content {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+/* email_section_end */
+
+
+
+/* integrations_section_start  */
+
+.section_integration_component{
+  display: flex;
+  flex-flow: column;
+  grid-row-gap: 5rem;
+}
+
+
+.integration_section_header {
+  display: flex;
+  justify-content: space-between;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  flex-flow: wrap;
+}
+
+.integration_section_header_right {
+  max-width: 37.5rem;
+  display: flex;
+  flex-flow: column;
+  grid-row-gap: 2.5rem;
+  align-items: flex-start;
+
+}
+
+.section_integration_grid_single_item {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+
+.integration_single_item_inner_content{
+  display: flex;
+  flex-flow: column;
+}
+
+.section_integration_grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(308px, 100%), 1fr));
+}
+
+
+/* integrations_section_end */
+
+
+/* Customer_Experiences_section_start */
+
+.Customer_Experiences_component{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+
+/* Customer_Experiences_section_end */
