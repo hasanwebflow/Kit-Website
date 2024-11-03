@@ -93,6 +93,11 @@ img {
   padding-bottom: 5rem;
 }
 
+.section_gap3 {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
 .section_gap_top {
   padding-top: 8rem;
 }
@@ -104,10 +109,6 @@ img {
 .w_current {
   color: var(--typography--black);
   font-weight: 600;
-}
-
-.w_black {
-  color: var(--typography--black);
 }
 
 .text_kit_blue {
@@ -165,8 +166,16 @@ img {
 .max_w320 {
   max-width: 20rem;
 }
+
 .max_w390 {
   max-width: 24.375rem;
+}
+.max_w500 {
+  max-width: 31.25rem;
+}
+
+.max_w745 {
+  max-width: 46.563rem;
 }
 
 .bullet_point {
@@ -183,6 +192,21 @@ img {
   padding: 2rem;
 }
 
+.pt_48 {
+  padding-top: 3rem;
+}
+.pb_48 {
+  padding-bottom: 3rem;
+}
+
+.pb_16 {
+  padding-bottom: 1rem;
+}
+
+.pb_32 {
+  padding-bottom: 2rem;
+}
+
 .pb_40 {
   padding-bottom: 2.5rem;
 }
@@ -191,11 +215,11 @@ img {
   padding: 5rem;
 }
 
-.pt_100 {
+.pt_160 {
   padding-top: 10rem;
 }
 
-.pb_100 {
+.pb_160 {
   padding-bottom: 10rem;
 }
 
@@ -213,6 +237,9 @@ img {
 
 .mb_12 {
   margin-bottom: 0.75rem;
+}
+.mb_16 {
+  margin-bottom: 1rem;
 }
 
 .mb_24 {
@@ -294,11 +321,11 @@ img {
   background-color: var(--typography--ash);
 }
 
-.P_relative {
+.p_relative {
   position: relative;
 }
 
-.P_absulute {
+.p_absulute {
   position: absolute;
 }
 
@@ -368,8 +395,8 @@ h4 {
 
 .heading_xs {
   font-family: 'KitSans';
-  font-size: 1.875rem;
-  font-weight: 700;
+  font-size: 0.875rem;
+  font-weight: 500;
   line-height: 1;
 }
 
@@ -483,8 +510,10 @@ h4 {
 }
 
 .button_primary {
-  padding: 0.5rem 0.875rem;
-  display: inline-block;
+  padding: 0.6rem 0.975rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home_banner_title {
@@ -717,7 +746,6 @@ h4 {
 .section_email_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(309px, 100%), 1fr));
-
 }
 
 .section_email_single_item {
@@ -741,16 +769,13 @@ h4 {
 
 /* email_section_end */
 
-
-
 /* integrations_section_start  */
 
-.section_integration_component{
+.section_integration_component {
   display: flex;
   flex-flow: column;
   grid-row-gap: 5rem;
 }
-
 
 .integration_section_header {
   display: flex;
@@ -766,7 +791,6 @@ h4 {
   flex-flow: column;
   grid-row-gap: 2.5rem;
   align-items: flex-start;
-
 }
 
 .section_integration_grid_single_item {
@@ -775,28 +799,113 @@ h4 {
   align-items: flex-start;
 }
 
-.integration_single_item_inner_content{
+.integration_single_item_inner_content {
   display: flex;
   flex-flow: column;
 }
 
-.section_integration_grid{
+.section_integration_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(308px, 100%), 1fr));
 }
 
-
 /* integrations_section_end */
-
 
 /* Customer_Experiences_section_start */
 
-.Customer_Experiences_component{
+.Customer_Experiences_component {
+  display: flex;
+  align-items: center;
+  grid-column-gap: 3rem;
+  grid-row-gap: 2rem;
+}
+
+/* Customer_Experiences_section_end */
+
+/* cta_section_start */
+
+.section_cta_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  grid-column-gap: 2rem;
+  grid-row-gap: 2rem;
 }
 
+/* cta_section_end */
 
-/* Customer_Experiences_section_end */
+/* moving_section_start */
+
+.section_kit_moving_component {
+  display: flex;
+  flex-flow: column;
+  grid-row-gap: 4rem;
+}
+.section_moving_img {
+  margin-bottom: -48px;
+  position: relative;
+  margin-left: -28px;
+}
+
+.kit_moving_perawrap {
+  max-width: 38rem;
+  align-self: flex-end;
+}
+
+/* moving_section_end */
+
+/* footer_section_start */
+
+.footer_top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-column-gap: 1rem;
+  grid-row-gap: 2rem;
+  /* flex-wrap: wrap; */
+}
+
+.footer_link_wrap {
+  display: flex;
+  flex-flow: column;
+  grid-row-gap: 0.5rem;
+}
+
+.footer_menu_wrapper {
+  display: grid;
+  width: 100%;
+  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 2.5rem;
+}
+
+.footer_about {
+  width: 24.688rem;
+}
+
+.footer_social_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer_bottom_wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2rem;
+}
+
+.privacy_policy {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.copy_right_text {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+/* footer_section_end */
