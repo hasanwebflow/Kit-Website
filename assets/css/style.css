@@ -36,7 +36,7 @@ body {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
-  letter-spacing: -.16px;
+  letter-spacing: -0.16px;
 }
 
 img {
@@ -105,13 +105,10 @@ img {
   padding-bottom: 3rem;
 }
 
-
 .section_gap_160_80 {
   padding-top: 10rem;
   padding-bottom: 5rem;
 }
-
-
 
 .section_gap_top_64 {
   padding-top: 4rem;
@@ -124,7 +121,6 @@ img {
 .section_gap_bottom_160 {
   padding-bottom: 10rem;
 }
-
 
 .section_gap_top_128 {
   padding-top: 8rem;
@@ -143,7 +139,6 @@ img {
   color: var(--typography--black);
   font-weight: 600;
 }
-
 
 .text_kit_blue {
   color: var(--brand--blue);
@@ -193,6 +188,10 @@ img {
   max-width: 18ch;
 }
 
+.max_w32 {
+  max-width: 32ch;
+}
+
 .max_w600 {
   max-width: 37.5rem;
 }
@@ -226,15 +225,14 @@ img {
   padding: 2rem;
 }
 
-.inner_py24{
+.inner_py24 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
 
-.inner_p80{
+.inner_p80 {
   padding: 5rem;
 }
-
 
 .pb_16 {
   padding-bottom: 1rem;
@@ -247,7 +245,6 @@ img {
 .pb_40 {
   padding-bottom: 2.5rem;
 }
-
 
 .pt_160 {
   padding-top: 10rem;
@@ -363,6 +360,10 @@ img {
   position: absolute;
 }
 
+.flex-d {
+  flex-flow: column;
+}
+
 .text_center {
   text-align: center;
 }
@@ -394,35 +395,40 @@ h4 {
 
 .heading_xl {
   font-family: 'KitSans';
-  font-size: 5rem;
+  /* font-size: 5rem; */
+  font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 500;
   line-height: 0.95;
 }
 
 .heading_xxl {
   font-family: 'KitSans';
-  font-size: 8rem;
+  /* font-size: 8rem; */
+  font-size: clamp(3.5rem, 8vw, 8rem);
   font-weight: 500;
   line-height: 0.95;
 }
 
 .heading_lg {
   font-family: 'KitSans';
-  font-size: 4rem;
+  /* font-size: 4rem; */
+  font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 500;
   line-height: 1;
 }
 
 .heading_md {
   font-family: 'KitSans';
-  font-size: 3.5rem;
+  /* font-size: 3.5rem; */
+  font-size: clamp(2.1rem, 5.5vw, 3.5rem);
   font-weight: 500;
   line-height: 1;
 }
 
 .heading_sm {
   font-family: 'KitSans';
-  font-size: 3rem;
+  /* font-size: 3rem; */
+  font-size: clamp(1.8rem, 3vw, 3rem);
   font-weight: 500;
   line-height: 1;
 }
@@ -461,7 +467,7 @@ h4 {
 
 /* nav_info_start */
 
-.nav_info_area{
+.nav_info_area {
   display: block;
   background-color: var(--brand--blue);
   padding: 10px 16px;
@@ -476,6 +482,12 @@ h4 {
 
 .nav_arrow_icon {
   padding-left: 2px;
+}
+
+.mobile_menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* nav_info_end */
@@ -506,11 +518,19 @@ h4 {
   padding-right: 4rem;
 }
 
+.nav_menu_wrapper.active {
+  display: block;
+  top: 0%;
+  transform: translateY(0%);
+  visibility: visible;
+}
+
 .nav_list {
   display: flex;
   align-items: center;
   gap: 0.25rem;
   padding: 0.25rem;
+  border-radius: 0.875rem;
   background-color: var(--typography--ash);
 }
 
@@ -520,6 +540,11 @@ h4 {
   align-items: center;
   gap: 0.25rem;
   padding: 0.625rem 0.875rem;
+  border-radius: 0.625rem;
+}
+
+.nav_link:hover {
+  background-color: #cecbc6;
 }
 
 .mobile_menu {
@@ -629,11 +654,21 @@ h4 {
   grid-row-gap: 1rem;
   grid-area: 2 / 4 / 3 / 7;
 }
-
+.section_gap_top_128 {
+  overflow: hidden;
+}
+.business_purpose_marquee {
+  animation: bannermove 20s linear infinite;
+  width: 200%;
+}
+.w100 {
+  width: 100%;
+}
 .marquee_scroller_wrapper {
   display: flex;
   grid-column-gap: 3.25rem;
   overflow: hidden;
+  width: 100%;
 }
 
 .marquee_scroller_card {
@@ -642,7 +677,14 @@ h4 {
   grid-gap: 1rem;
   flex-shrink: 0;
 }
-
+@keyframes bannermove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 /* business_purpose_section_end*/
 
 /* grow_section_start */
@@ -684,9 +726,8 @@ h4 {
 .grow_card_wrapper {
   display: flex;
   justify-content: space-between;
-  grid-column-gap: 1rem;
+  grid-column-gap: 2rem;
   grid-row-gap: 2rem;
-  flex-flow: wrap;
 }
 
 .grow_card_left {
@@ -701,10 +742,12 @@ h4 {
   justify-content: space-between;
   grid-column-gap: 2rem;
   grid-row-gap: 2rem;
+  max-width: 37.5rem;
 }
 
 .grow_card_right_wrap {
   position: relative;
+  max-width: 37.5rem;
 }
 
 .grow_card_right {
@@ -727,17 +770,17 @@ h4 {
 
 /* counting_section_start */
 
-.grid_card_list_item .cc_orange{
+.grid_card_list_item .cc_orange {
   background-image: url(../images/icon/grow_counting/checkbox_orange.svg);
   width: 1.5rem;
   height: 1.5rem;
 }
-.grid_card_list_item .cc_green{
+.grid_card_list_item .cc_green {
   background-image: url(../images/icon/selling_counting/checkedbox_green-6.svg);
   width: 1.5rem;
   height: 1.5rem;
 }
-.grid_card_list_item .cc_purple{
+.grid_card_list_item .cc_purple {
   background-image: url(../images/icon/earn_counting/checkedbox_purple.svg);
   width: 1.5rem;
   height: 1.5rem;

@@ -1,0 +1,106 @@
+@media (max-width: 991px) {
+  .nav_brand {
+    padding-right: 0rem;
+  }
+
+  .mobile_menu {
+    display: block;
+    color: black;
+    padding: 6px;
+  }
+
+  .nav_menu_wrapper {
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    z-index: -1;
+    padding-top: 100px;
+    padding-bottom: 70px;
+    border-radius: 0rem;
+    background-color: var(--typography--white);
+    box-shadow: 0 20px 35px #0000001a;
+    transition: all 400ms;
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+
+  .nav_list {
+    flex-direction: column;
+    background-color: var(--typography--white);
+  }
+
+  .nav_link {
+    font-size: 1.125rem;
+  }
+
+  .grow_card_wrapper {
+    flex-flow: column;
+  }
+
+  .business_purpose_header_content {
+    grid-row-gap: 2rem;
+    grid-template: repeat(1, 1fr) / repeat(6, 1fr);
+  }
+
+  .home_banner_title {
+    max-width: 32ch;
+  }
+
+  .business_purpose_header_text_wrap {
+    grid-area: 2 / 2 / 3 / 7;
+  }
+
+  .banner_visual_card_img {
+    max-width: 360px;
+  }
+
+  .top {
+    padding-right: 0px;
+  }
+
+  .grow_card_left_wrap {
+    flex-flow: row;
+    max-width: 100%;
+    align-items: center;
+  }
+  .grow_card_right_wrap {
+    max-width: 100%;
+    padding: 2rem 2rem 0rem 2rem;
+  }
+
+  .grow_card_right_img {
+    width: 536px;
+  }
+
+  .banner_about_visul {
+    margin-top: -150px;
+  }
+
+  .counter_wrapper_grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .counter_wrapper_grid_card {
+    flex-flow: row;
+  }
+
+  .flex-d {
+    flex-flow: column;
+  }
+
+  .max_w459 {
+    max-width: 459px;
+  }
+  .max_w400 {
+    max-width: 400px;
+  }
+
+  .first_col {
+    grid-area: 1 / 1 / 2 / 4;
+  }
+  .last_col {
+    grid-area: 3 / 1 / 3 / 4;
+  }
+}
